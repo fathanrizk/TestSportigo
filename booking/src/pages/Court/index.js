@@ -1,11 +1,25 @@
 import React, {Component} from 'react';
+import {ButtonGroup} from 'react-native-elements';
+import {Alert} from 'react-native';
 import { View, Text,TouchableOpacity, TextInput, StyleSheet, Image} from 'react-native';
 
 
-
-
 class Style extends Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        select: 0
+      }
+      this.selectType = this.selectType.bind(this)
+    }
+    selectType = (newselectType) => {
+      this.setState ({ select: newselectType})
+    }
     render() {
+      const button = ['10:00','11:00','12:00','13:00',
+                      '14:00','15:00','16:00','17:00',
+                      '18:00','19:00','20:00','21:00']
+      const {selectedIndex} = this.state
       return (
     
             <View style={styles.container}>
@@ -28,6 +42,11 @@ class Style extends Component {
                       style={styles.lapangan}
                       source={require ('../Images/lapangan.png')}
                       />
+                    <ButtonGroup
+                      onPress={this.selectType}
+                      selectedIndex = {this.state.select}
+                      buttons = {button}
+                      containerStyle = {{height: 50, paddingLeft: 89}}/>
                 </View>
 
                 <View style={styles.lap2}>
