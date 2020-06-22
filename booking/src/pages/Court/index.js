@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View, Text,TouchableOpacity, TextInput, StyleSheet} from 'react-native';
+import { View, Text,TouchableOpacity, TextInput, StyleSheet, Image} from 'react-native';
 
 
 
@@ -18,6 +18,16 @@ class Style extends Component {
                     Lapangan Futsal Tifosi</Text>
                     <Text style={styles.textlap11}>
                     Jl. Raden Inten II No.A30-31, RT.1/RW.5, Duren Sawit</Text>
+                    <Text style={styles.textlapa}>Lapangan A</Text>
+                    <Image 
+                      style={styles.lapangan}
+                      source={require ('../Images/lapangan.png')}
+                      />
+                      <Text style={styles.textlapa1}>Lapangan B</Text>
+                      <Image 
+                      style={styles.lapangan}
+                      source={require ('../Images/lapangan.png')}
+                      />
                 </View>
 
                 <View style={styles.lap2}>
@@ -25,9 +35,28 @@ class Style extends Component {
                     Lapangan Futsal Tifosi</Text>
                     <Text style={styles.textlap11}>
                     Jl. Raden Inten II No.A30-31, RT.1/RW.5, Duren Sawit</Text>
+                    <Text style={styles.textlapa}>Lapangan A</Text>
+                    <Image 
+                      style={styles.lapangan}
+                      source={require ('../Images/lapangan.png')}
+                      />
                 </View>
-
-
+                <View style={styles.bottom}/>
+                <View style={styles.court0}>
+                    <View style={{ flex : 1, alignItems:'center', justifyContent: 'center'}}>
+                    <Image 
+                      source={require ('../Images/pilihan.png')}
+                      />
+                      <Text>Court</Text>
+                      
+                    </View>
+                    <View style={{flex:1,borderLeftWidth:1, alignItems:'center', justifyContent: 'center'}}>
+                    <Image 
+                      source={require ('../Images/user.png')}
+                      />
+                      <Text>Profile</Text>
+                    </View>
+                </View>
       </View>
     );
   }
@@ -51,6 +80,19 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       backgroundColor: '#FFFFFF',
       flexDirection: 'column',
+      
+    },
+    bottom:{
+      paddingTop : 40
+      
+    },
+    court0:{
+      width : 414,
+      height : 70,
+      flexDirection : 'row',
+      backgroundColor: '#FFFFFF',
+      borderWidth :1
+      
       
     },
     court1:{
@@ -90,4 +132,23 @@ const styles = StyleSheet.create({
         color: 'black',
         paddingLeft: 50
     },
+    textlapa:{
+      fontSize: 12,
+      fontFamily: 'robotot',
+      marginTop : 15,
+      color: 'red',
+      paddingLeft: 33
+  },
+  textlapa1:{
+    fontSize: 12,
+    fontFamily: 'robotot',
+    marginTop : 15,
+    color: 'red',
+    paddingLeft: 33
+},
+    lapangan:{
+      width : 125,
+      height : 72,
+      marginTop : 5,
+    }
   });
