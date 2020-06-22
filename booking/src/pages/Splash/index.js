@@ -1,18 +1,37 @@
 import React, { useEffect } from 'react';
 
-import { View, Text} from 'react-native';
+import { View, Text, StyleSheet, ImageBackground, Image} from 'react-native';
 
 const Splash = ({navigation}) => {
     useEffect(()=>{
         setTimeout(()=>{
-            navigation.replace('Court');
+            navigation.replace('Login');
         }, 2000)
     })
     return (
-        <View>
-            <Text>Splash Screen</Text>
-        </View>
+
+        <ImageBackground style={styles.bg}
+        source={require ('../Images/background.png')}
+        >
+            <View style={styles.logo}>
+            <   Image 
+                      source={require ('../Images/logo.png')}
+                      />
+            </View>
+        </ImageBackground>
     );
 };
 
 export default Splash;
+
+const styles = StyleSheet.create({
+    bg:{
+        width : '100%',
+        height : '100%'
+      },
+    logo:{
+        flex: 1,
+        justifyContent:'center',
+        alignItems: 'center'
+    }
+});
