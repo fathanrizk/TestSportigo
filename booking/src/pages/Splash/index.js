@@ -5,7 +5,7 @@ import { View, Text, StyleSheet, ImageBackground, Image} from 'react-native';
 const Splash = ({navigation}) => {
     useEffect(()=>{
         setTimeout(()=>{
-            navigation.replace('Login');
+            navigation.replace('Court');
         }, 2000)
     })
     return (
@@ -14,7 +14,7 @@ const Splash = ({navigation}) => {
         source={require ('../Images/background.png')}
         >
             <View style={styles.logo}>
-            <   Image 
+            <   Image
                       source={require ('../Images/logo.png')}
                       />
             </View>

@@ -21,7 +21,7 @@ class Style extends Component {
                       '18:00','19:00','20:00','21:00']
       const {selectedIndex} = this.state
       return (
-    
+
             <View style={styles.container}>
                 <View style={styles.court}>
                     <Text style={styles.court1}>Court</Text>
@@ -32,21 +32,39 @@ class Style extends Component {
                     Lapangan Futsal Tifosi</Text>
                     <Text style={styles.textlap11}>
                     Jl. Raden Inten II No.A30-31, RT.1/RW.5, Duren Sawit</Text>
-                    <Text style={styles.textlapa}>Lapangan A</Text>
-                    <Image 
-                      style={styles.lapangan}
-                      source={require ('../Images/lapangan.png')}
-                      />
-                      <Text style={styles.textlapa1}>Lapangan B</Text>
-                      <Image 
-                      style={styles.lapangan}
-                      source={require ('../Images/lapangan.png')}
-                      />
-                    <ButtonGroup
-                      onPress={this.selectType}
-                      selectedIndex = {this.state.select}
-                      buttons = {button}
-                      containerStyle = {{height: 50, paddingLeft: 89}}/>
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{alignItems: 'flex-start'}}>
+                        <Text style={styles.textlapa}>Lapangan A</Text>
+                        <Image
+                          style={styles.lapangan}
+                          source={require ('../Images/lapangan.png')}
+                        />
+                      </View>
+                      <View style={{ justifyContent: 'center', alignItems: 'flex-end'}}>
+                        <ButtonGroup
+                          onPress={this.selectType}
+                          selectedIndex = {this.state.select}
+                          buttons = {button}
+                          containerStyle = {{height: 30, width:150}}/>
+                      </View>
+                      </View>
+                      <View style={{flexDirection: 'row'}}>
+                        <View style={{alignItems: 'flex-start'}}>
+                          <Text style={styles.textlapa}>Lapangan B</Text>
+                          <Image
+                            style={styles.lapangan}
+                            source={require ('../Images/lapangan.png')}
+                          />
+                        </View>
+                        <View style={{ justifyContent: 'center', alignItems: 'flex-end'}}>
+                          <ButtonGroup
+                            onPress={this.selectType}
+                            selectedIndex = {this.state.select}
+                            buttons = {button}
+                            containerStyle = {{height: 30, width:150}}/>
+                        </View>
+                        </View>
+
                 </View>
 
                 <View style={styles.lap2}>
@@ -54,23 +72,34 @@ class Style extends Component {
                     Lapangan Futsal Tifosi</Text>
                     <Text style={styles.textlap11}>
                     Jl. Raden Inten II No.A30-31, RT.1/RW.5, Duren Sawit</Text>
-                    <Text style={styles.textlapa}>Lapangan A</Text>
-                    <Image 
-                      style={styles.lapangan}
-                      source={require ('../Images/lapangan.png')}
-                      />
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{alignItems: 'flex-start'}}>
+                        <Text style={styles.textlapa}>Lapangan A</Text>
+                        <Image
+                          style={styles.lapangan}
+                          source={require ('../Images/lapangan.png')}
+                        />
+                      </View>
+                      <View style={{ justifyContent: 'center', alignItems: 'flex-end'}}>
+                        <ButtonGroup
+                          onPress={this.selectType}
+                          selectedIndex = {this.state.select}
+                          buttons = {button}
+                          containerStyle = {{height: 30, width:150}}/>
+                      </View>
+                      </View>
                 </View>
                 <View style={styles.bottom}/>
                 <View style={styles.court0}>
                     <View style={{ flex : 1, alignItems:'center', justifyContent: 'center'}}>
-                    <Image 
+                    <Image
                       source={require ('../Images/pilihan.png')}
                       />
                       <Text>Court</Text>
-                      
+
                     </View>
                     <View style={{flex:1,borderLeftWidth:1, alignItems:'center', justifyContent: 'center'}}>
-                    <Image 
+                    <Image
                       source={require ('../Images/user.png')}
                       />
                       <Text>Profile</Text>
@@ -85,7 +114,7 @@ export default Style;
 
 const styles = StyleSheet.create({
     container: {
-        
+
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F6F6F6',
@@ -99,11 +128,11 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       backgroundColor: '#FFFFFF',
       flexDirection: 'column',
-      
+
     },
     bottom:{
       paddingTop : 40
-      
+
     },
     court0:{
       width : 414,
@@ -111,8 +140,8 @@ const styles = StyleSheet.create({
       flexDirection : 'row',
       backgroundColor: '#FFFFFF',
       borderWidth :1
-      
-      
+
+
     },
     court1:{
         fontSize : 30
@@ -122,7 +151,7 @@ const styles = StyleSheet.create({
       width: 320,
       height:282,
       padding:10,
-      
+
       backgroundColor: '#FFFFFF',
       flexDirection: 'column',
       borderRadius:10,
@@ -133,7 +162,7 @@ const styles = StyleSheet.create({
       width: 320,
       height:180,
       padding:10,
-      
+
       backgroundColor: '#FFFFFF',
       flexDirection: 'column',
       borderRadius:10,
