@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
-import { View, Text,TouchableOpacity, TextInput, StyleSheet} from 'react-native';
+import { View,onPress, Text,TouchableOpacity, TextInput, StyleSheet, Button, Alert} from 'react-native';
 import { color } from 'react-native-reanimated';
 
     class Style extends Component {
+      _onPressButton = () => {
+        alert("Test")
+      }
         render() {
           return (
         
@@ -25,7 +28,8 @@ import { color } from 'react-native-reanimated';
             <TouchableOpacity style={styles.buttonStyle}>
               <Text style={styles.textSignup}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.buttonStyle1}>
+            <TouchableOpacity style={styles.buttonStyle1} 
+              onPress={this._onPressButton}>
             <Text style={styles.textSignup}>Register</Text>
             </TouchableOpacity>
           </View>

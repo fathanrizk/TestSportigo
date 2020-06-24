@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Splash, Login, Register, WelcomeAuth ,Court} from '../pages';
+import { Splash, Login, Register, WelcomeAuth ,Court,Profile} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +21,10 @@ const Router = () => {
             headerShown: false,
             }} />
             <Stack.Screen name="Court" component={Court}
+            options={{
+            headerShown: false,
+            }} />
+            <Stack.Screen name="Profile" component={Profile}
             options={{
             headerShown: false,
             }} />
