@@ -45,7 +45,7 @@ class Style extends Component {
                           onPress={this.selectType}
                           selectedIndex = {this.state.select}
                           buttons = {button}
-                          containerStyle = {{height: 60, width:150, color: 'white'}}/>
+                          containerStyle = {{height: 60, width:150, color: 'white', flexContainer: {display: 'flex', flexWrap: 'wrap'}}}/>
                       </View>
                       </View>
                       <View style={{flexDirection: 'row'}}>
@@ -61,7 +61,7 @@ class Style extends Component {
                             onPress={this.selectType}
                             selectedIndex = {this.state.select}
                             buttons = {button}
-                            containerStyle = {{height: 60, width:150, color: 'white'}}/>
+                            containerStyle = {{height: 60, width:150, color: 'white', flexContainer: {display: 'flex', flexWrap: 'wrap'}}}/>
                         </View>
                         </View>
 
@@ -85,7 +85,7 @@ class Style extends Component {
                           onPress={this.selectType}
                           selectedIndex = {this.state.select}
                           buttons = {button}
-                          containerStyle = {{height: 60, width:150, color: 'white'}}/>
+                          containerStyle = {{height: 60, width:150, color: 'white', flexContainer: {display: 'flex', flexWrap: 'wrap'}}}/>
                       </View>
                       </View>
                 </View>
